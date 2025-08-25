@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - SHM INDIA 28</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #222222;
+    }
+    header {
+      background-color: #162336;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    nav {
+      display: flex;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -5px;
+      background-color: #ffcc00;
+      transition: width 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .about {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+    .about h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #444;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+    footer {
+      background: #162336;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="services/Images/logo.png" alt="SHM Logo" />
+      <h1>SHM INDIA 28</h1>
+    </a>
+  </div>
+
+  <!-- Hamburger Button -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Side Drawer Navbar -->
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+
+  <main>
+    <section class="about" id="about">
+      <h2>About Us</h2>
+      <p>
+        Welcome to <strong>SHM INDIA 28</strong> – your trusted partner in <em>content designing</em>. 
+        We specialize in creating visually appealing and impactful content that helps businesses, 
+        brands, and individuals stand out. From graphics to layouts, we ensure every design 
+        reflects creativity and professionalism.
+      </p>
+      <p>
+        Our mission is to deliver high-quality, innovative designs that connect with your audience 
+        and elevate your brand identity. Whether it's posters, social media graphics, or business 
+        branding, we bring your ideas to life.
+      </p>
+
+      <div class="gallery">
+        <img src="AboutImages/1.png" alt="Creative Design 1">
+        <img src="AboutImages/2.png" alt="Creative Design 2">
+        <img src="AboutImages/3.png" alt="Creative Design 3">
+        <img src="AboutImages/4.png" alt="Creative Design 4">
+        <img src="AboutImages/5.png" alt="Creative Design 5">
+        <img src="AboutImages/6.png" alt="Creative Design 6">
+        <img src="AboutImages/7.png" alt="Creative Design 7">
+        <img src="AboutImages/8.png" alt="Creative Design 8">
+        <img src="AboutImages/9.png" alt="Creative Design 9">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SHM INDIA 28 | All Rights Reserved</p>
+  </footer>
+  <!-- 🔹 JS for Hamburger -->
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("navbar");
+
+  // Toggle open/close
+  menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation(); // click bubble na ho
+    nav.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+  });
+
+  // Auto-close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+      nav.classList.remove("active");
+      menuToggle.classList.remove("active");
+    }
+  });
+
+  // Auto-close when clicking on a link
+  document.querySelectorAll("#navbar a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+      menuToggle.classList.remove("active");
+    });
+  });
+</script>
+</body>
+</html>

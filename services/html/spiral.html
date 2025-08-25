@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../../style.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spiral & Book Design - SHM INDIA 28</title>
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#f4f4f4; }
+    header { background:#162336; color:#fff; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; }
+    header h1 { margin:0; font-size:1.2rem; }
+    header h1 a { color:#fff; text-decoration:none; }
+    nav a { color:#fff; text-decoration:none; margin-left:1.5rem; font-weight:bold; }
+    nav a:hover { color:#ffcc00; }
+    .gallery { max-width:1100px; margin:2rem auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1.5rem; padding:0 1rem; }
+    .gallery img { width:100%; height:220px; object-fit:cover; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.2); transition:transform 0.3s ease; }
+    .gallery img:hover { transform:scale(1.05); }
+    h2 { text-align:center; margin-top:2rem; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="/services/Images/logo.png" alt="SHM Logo">
+      <h1>SHM INDIA 28</h1>
+    </a>
+  </div>
+
+  <!-- Right side container -->
+  <div class="header-right">
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+      <a href="../../index.html">Home</a>
+      <a href="../../about.html">About</a>
+      <a href="../../services.html">Services</a>
+      <a href="../../contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <h2>Spiral & Book Design Samples</h2>
+  <div class="gallery">
+    <img src="images/spiral1.jpg" alt="Spiral & Book Design Samples Sample 1">
+    <img src="images/spiral2.jpg" alt="Spiral & Book Design Samples Sample 2">
+    <img src="images/spiral3.jpg" alt="Spiral & Book Design Samples Sample 3">
+  </div>
+  </main>
+
+    <footer>
+     <p>© 2025 SHM INDIA 28 | All Rights Reserved</p>
+  </footer>
+  <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("navbar");
+
+  menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    nav.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+  });
+
+  // बाहर click करने पर menu बंद
+  document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+      nav.classList.remove("active");
+      menuToggle.classList.remove("active");
+    }
+  });
+
+  // Link पर click करने पर menu बंद
+  document.querySelectorAll("#navbar a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+      menuToggle.classList.remove("active");
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - SHM INDIA 28</title>
+  <link rel="stylesheet" href="style.css"> <!-- Common CSS file -->
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="services/Images/logo.png" alt="SHM Logo" />
+      <h1>SHM INDIA 28</h1>
+    </a>
+  </div>
+
+  <!-- Hamburger Button -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Side Drawer Navbar -->
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<main>
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Feel free to reach out to us through any of the following platforms:</p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/919460942844" target="_blank">+91 9460942844</a>
+      </div>
+
+      <div class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:shmindia28@gmail.com">shmindia28@gmail.com</a>
+      </div>
+
+      <div class="contact-card">
+        <i class="fab fa-instagram"></i>
+        <a href="https://instagram.com/shmindia28" target="_blank">@shmindia28</a>
+      </div>
+
+      <div class="contact-card">
+        <i class="fab fa-telegram"></i>
+        <a href="https://t.me/Shmindia" target="_blank">@Shmindia</a>
+      </div>
+
+      <div class="contact-card">
+        <i class="fab fa-facebook"></i>
+        <a href="https://www.facebook.com/share/16hr6sgT9d/" target="_blank">SHM INDIA</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 SHM INDIA 28 | All Rights Reserved</p>
+</footer>
+
+<!-- 🔹 JS for Hamburger -->
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("navbar");
+
+  // Toggle open/close
+  menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation(); // click bubble na ho
+    nav.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+  });
+
+  // Auto-close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+      nav.classList.remove("active");
+      menuToggle.classList.remove("active");
+    }
+  });
+
+  // Auto-close when clicking on a link
+  document.querySelectorAll("#navbar a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+      menuToggle.classList.remove("active");
+    });
+  });
+</script>
+
+</body>
+</html>

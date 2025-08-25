@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHM INDIA 28 - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="services/Images/logo.png" alt="SHM Logo">
+        <h1>SHM INDIA 28</h1>
+      </a>
+    </div>
+
+    <!-- Right side container (hamburger + nav) -->
+    <div class="header-right">
+      <!-- Hamburger -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Navbar -->
+      <nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="hero-box">
+        <h1>Welcome to <span>SHM INDIA 28</span></h1>
+        <p>
+          Creative & Professional Design Solutions for Schools, Coaching Institutes, and Businesses.
+        </p>
+        <a href="services.html" class="btn">Get Started</a>
+
+        <!-- 🔹 Scrolling Text -->
+        <div class="scrolling-text">
+          <span>📢 Order Now • Order Now • Order Now • Offer 50% Off •</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SHM INDIA 28 | All Rights Reserved</p>
+  </footer>
+
+  <!-- 🔹 JS for Hamburger -->
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("navbar");
+
+  // Toggle open/close
+  menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation(); // click bubble na ho
+    nav.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+  });
+
+  // Auto-close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+      nav.classList.remove("active");
+      menuToggle.classList.remove("active");
+    }
+  });
+
+  // Auto-close when clicking on a link
+  document.querySelectorAll("#navbar a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+      menuToggle.classList.remove("active");
+    });
+  });
+</script>
+
+  </script>
+</body>
+</html>

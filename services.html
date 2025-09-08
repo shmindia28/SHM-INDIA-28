@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services - SHM INDIA 28</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="services/Images/logo.png" alt="Logo">
+        <h1>SHM INDIA 28</h1>
+      </a>
+    </div>
+
+    <!-- Right side (hamburger + nav) -->
+    <div class="header-right">
+      <!-- Hamburger -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Navbar -->
+      <nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Services Section -->
+  <main>
+    <section class="services">
+      <h2>Our Services</h2>
+      <div class="service-grid">
+
+        <a href="services/html/worksheet.html" class="card">
+          <i class="fas fa-file-alt"></i>
+          <h3>Worksheet & Practice Sheet Design</h3>
+          <p>Professionally designed worksheets and practice sheets for schools and coaching institutes.</p>
+        </a>
+
+        <a href="services/html/exam.html" class="card">
+          <i class="fas fa-file-signature"></i>
+          <h3>Exam Question Paper Formatting</h3>
+          <p>Neat and well-formatted exam papers with proper alignment and structure.</p>
+        </a>
+
+        <a href="services/html/certificate.html" class="card">
+          <i class="fas fa-certificate"></i>
+          <h3>Digital Certificates</h3>
+          <p>Custom-designed digital certificates for schools, events, and organizations.</p>
+        </a>
+
+        <a href="services/html/posters.html" class="card">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <h3>School, Coaching & Institution Posters</h3>
+          <p>Attractive posters for events, admissions, and academic promotions.</p>
+        </a>
+
+        <a href="services/html/festival.html" class="card">
+          <i class="fas fa-calendar-day"></i>
+          <h3>Festival & Social Media Posts</h3>
+          <p>Eye-catching festival greetings and professional social media creatives.</p>
+        </a>
+
+        <a href="services/html/spiral.html" class="card">
+          <i class="fas fa-book"></i>
+          <h3>Spiral & Book Design</h3>
+          <p>Complete spiral binding design and custom book layouts.</p>
+        </a>
+
+        <a href="services/html/visiting.html" class="card">
+          <i class="fas fa-id-card"></i>
+          <h3>Visiting Cards & ID Cards</h3>
+          <p>Professional visiting cards and staff/student ID cards with a modern look.</p>
+        </a>
+
+        <a href="services/html/others.html" class="card">
+          <i class="fas fa-paint-brush"></i>
+          <h3>Other Creative Designs</h3>
+          <p>From banners to flyers, we design everything to match your brand identity.</p>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SHM INDIA 28 | All Rights Reserved</p>
+  </footer>
+
+  <!-- 🔹 JS for Hamburger -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("navbar");
+
+    // Toggle open/close
+    menuToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      nav.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+    });
+
+    // Auto-close when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+        nav.classList.remove("active");
+        menuToggle.classList.remove("active");
+      }
+    });
+
+    // Auto-close when clicking on a link
+    document.querySelectorAll("#navbar a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("active");
+        menuToggle.classList.remove("active");
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worksheet Design – SHM INDIA 28</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" />
+
+  <!-- Main site CSS -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- Header injected from root -->
+  <div id="site-header"></div>
+
+ <section class="hero">
+  <h1>Worksheet Design Samples</h1>
+  <p>Some of our latest custom worksheet designs for schools & coaching institutes.</p>
+</section>
+
+
+  <!-- Image gallery -->
+  <section class="gallery grid-gallery" id="gallery"></section>
+
+  <!-- Footer injected from root -->
+  <div id="site-footer"></div>
+
+  <!-- Correct relative path for subpages -->
+  <script src="../script.js"></script>
+
+  <script>
+    const gallery = document.getElementById('gallery');
+    for (let i = 1; i <= 110; i++) {
+      const img = document.createElement('img');
+      img.src = `../images/socialposts/${i}.png`;
+      img.alt = `Worksheet Sample ${i}`;
+      gallery.appendChild(img);
+    }
+  </script>
+</body>
+</html>

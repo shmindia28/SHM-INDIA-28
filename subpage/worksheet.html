@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worksheet Design – SHM INDIA 28</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" />
+
+  <!-- Main site CSS -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- Header injected from root -->
+  <div id="site-header"></div>
+
+ <section class="hero">
+  <h1>📄 EduSheet Designs </h1> <h2> <br>Worksheets & Exam Papers, Professionally Crafted</h2>
+  <p>Boost classroom impact with clean, bilingual, and exam-ready designs tailored for your institution.
+
+<div>
+📘 कोचिंग और स्कूल के लिए प्रोफेशनल वर्कशीट और परीक्षा पत्र डिज़ाइन सेवा।
+हम बनाते हैं साफ-सुथरे, दोभाषीय और मार्किंग स्ट्रक्चर वाले पेपर—सीधे क्लासरूम में इस्तेमाल के लिए तैयार।
+आपके विषय, सेक्शन, और फॉर्मेट के अनुसार पूरी तरह कस्टमाइज़।</p>
+</div>
+</section>
+
+
+
+
+
+  <!-- Image gallery -->
+  <section class="gallery grid-gallery" id="gallery"></section>
+
+  <!-- Footer injected from root -->
+  <div id="site-footer"></div>
+
+  <!-- Correct relative path for subpages -->
+  <script src="../script.js"></script>
+
+  <script>
+    const gallery = document.getElementById('gallery');
+    for (let i = 1; i <= 47; i++) {
+      const img = document.createElement('img');
+      img.src = `../images/worksheet/${i}.png`;
+      img.alt = `Worksheet Sample ${i}`;
+      gallery.appendChild(img);
+    }
+  </script>
+</body>
+</html>

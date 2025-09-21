@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worksheet Design – SHM INDIA 28</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" />
+
+  <!-- Main site CSS -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- Header injected from root -->
+  <div id="site-header"></div>
+
+ <section class="hero">
+  <h1>📢 Important Updates & Reminders
+</h1>
+  <p><h2>Bring clarity and style to your school or tuition updates with professionally crafted visuals.
+Hindi Version: </h2></p>
+<p> <h2> 📌 अब हर सूचना दिखेगी खास!
+स्कूल या ट्यूशन के लिए नोटिस, रिमाइंडर और अनाउंसमेंट डिज़ाइन करवाएं—बिलकुल आपकी ज़रूरत के अनुसार।
+हम बनाते हैं ऐसे विजुअल्स जो न सिर्फ जानकारी दें, बल्कि ध्यान भी खींचें </h2></p>
+</section>
+
+
+
+  <!-- Image gallery -->
+  <section class="gallery grid-gallery" id="gallery"></section>
+
+  <!-- Footer injected from root -->
+  <div id="site-footer"></div>
+
+  <!-- Correct relative path for subpages -->
+  <script src="../script.js"></script>
+
+  <script>
+    const gallery = document.getElementById('gallery');
+    for (let i = 1; i <= 47; i++) {
+      const img = document.createElement('img');
+      img.src = `../images/announcement/${i}.jpg`;
+      img.alt = `Announcement ${i}`;
+      gallery.appendChild(img);
+    }
+  </script>
+</body>
+</html>

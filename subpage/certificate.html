@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worksheet Design – SHM INDIA 28</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" />
+
+  <!-- Main site CSS -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- Header injected from root -->
+  <div id="site-header"></div>
+
+ <section class="hero">
+  <h1>🏆 Custom Certificate Designs </h1> <br> <h2>Celebrate Every Achievement with Style!</h2>
+  <p>From academic excellence to participation awards, SHM crafts certificates that inspire pride and recognition.
+<br>
+🎓 हर उपलब्धि के लिए एक खास सर्टिफिकेट!
+हम बनाते हैं आपके स्कूल या ट्यूशन के लिए प्रोफेशनल और आकर्षक सर्टिफिकेट डिज़ाइन—जो बच्चों को प्रेरित करें और आपकी ब्रांड पहचान को भी दर्शाएं।
+अपना लोगो, रंग, भाषा और टाइटल चुनें—हम देंगे आपको रेडी-टू-प्रिंट डिज़ाइन।</p>
+</section>
+
+
+
+  <!-- Image gallery -->
+  <section class="gallery grid-gallery" id="gallery"></section>
+
+  <!-- Footer injected from root -->
+  <div id="site-footer"></div>
+
+  <!-- Correct relative path for subpages -->
+  <script src="../script.js"></script>
+
+  <script>
+    const gallery = document.getElementById('gallery');
+    for (let i = 1; i <= 57; i++) {
+      const img = document.createElement('img');
+      img.src = `../images/certificate/${i}.png`;
+      img.alt = `Certificate Sample ${i}`;
+      gallery.appendChild(img);
+    }
+  </script>
+</body>
+</html>

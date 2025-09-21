@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worksheet Design – SHM INDIA 28</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" />
+
+  <!-- Main site CSS -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- Header injected from root -->
+  <div id="site-header"></div>
+
+ <section class="hero">
+  <h1>BizPost Creatives</h1>
+  <p> <h2> 📢 PostPe – सोशल मीडिया डिज़ाइन सेवा</h2>
+Boost your brand with eye-catching posts for Instagram, Facebook & WhatsApp. <br>
+आपके बिज़नेस के लिए प्रोफेशनल, कस्टमाइज़्ड और रेडी-टू-शेयर पोस्ट—हर अवसर के लिए।
+</p>
+</section>
+
+
+  <!-- Image gallery -->
+  <section class="gallery grid-gallery" id="gallery"></section>
+
+  <!-- Footer injected from root -->
+  <div id="site-footer"></div>
+
+  <!-- Correct relative path for subpages -->
+  <script src="../script.js"></script>
+
+  <script>
+    const gallery = document.getElementById('gallery');
+    for (let i = 1; i <= 108; i++) {
+      const img = document.createElement('img');
+      img.src = `../images/socialposts/${i}.png`;
+      img.alt = `Worksheet Sample ${i}`;
+      gallery.appendChild(img);
+    }
+  </script>
+</body>
+</html>
